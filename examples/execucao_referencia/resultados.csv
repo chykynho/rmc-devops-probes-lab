@@ -1,0 +1,7 @@
+cenario,liveness,readiness,operacao,api_ativa,geracao_api,instancia,utc
+01 Saudável,200,200,200,True,1,542f4bb7-28d3-411a-a58e-dec383a53078,2026-10-13T02:25:21.632995+00:00
+02 PostgreSQL simulado parado,200,503,503,True,1,542f4bb7-28d3-411a-a58e-dec383a53078,2026-10-13T02:25:21.663912+00:00
+03 API reiniciada com dependência parada,200,503,503,True,2,76b24560-9314-489c-a52d-6f08d59ed40e,2026-10-13T02:25:21.687351+00:00
+04 PostgreSQL simulado recuperado,200,200,200,True,2,76b24560-9314-489c-a52d-6f08d59ed40e,2026-10-13T02:25:21.694685+00:00
+05 Redis simulado parado,200,503,503,True,2,76b24560-9314-489c-a52d-6f08d59ed40e,2026-10-13T02:25:21.724099+00:00
+06 Todas as dependências recuperadas,200,200,200,True,2,76b24560-9314-489c-a52d-6f08d59ed40e,2026-10-13T02:25:21.732494+00:00

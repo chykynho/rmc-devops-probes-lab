@@ -1,0 +1,95 @@
+{
+  "tipo": "simulação local HTTP; dependências substitutas de PostgreSQL e Redis",
+  "python": "3.12.14",
+  "utc": "2026-10-13T02:25:21.752669+00:00",
+  "codigo_sha256": "4632eb0e5c724d17fba207f7dd2fc8b6d7f7322aedebc23e071b6085ea30499f",
+  "pyproject_sha256": "90a10f7483dd99c44639de858700155b3624abfd8bbba66866ade74a3c72d685",
+  "notebook_fonte_sha256": "2021f3b585ad4af4ecf93e6e0eb7f37f5f2b31674f4c5ab4fc32a6f619135958",
+  "resultados": [
+    {
+      "cenario": "01 Saudável",
+      "liveness": 200,
+      "readiness": 200,
+      "operacao": 200,
+      "api_ativa": true,
+      "geracao_api": 1,
+      "instancia": "542f4bb7-28d3-411a-a58e-dec383a53078",
+      "dependencias": {
+        "postgresql_simulado": true,
+        "redis_simulado": true
+      },
+      "utc": "2026-10-13T02:25:21.632995+00:00"
+    },
+    {
+      "cenario": "02 PostgreSQL simulado parado",
+      "liveness": 200,
+      "readiness": 503,
+      "operacao": 503,
+      "api_ativa": true,
+      "geracao_api": 1,
+      "instancia": "542f4bb7-28d3-411a-a58e-dec383a53078",
+      "dependencias": {
+        "postgresql_simulado": false,
+        "redis_simulado": true
+      },
+      "utc": "2026-10-13T02:25:21.663912+00:00"
+    },
+    {
+      "cenario": "03 API reiniciada com dependência parada",
+      "liveness": 200,
+      "readiness": 503,
+      "operacao": 503,
+      "api_ativa": true,
+      "geracao_api": 2,
+      "instancia": "76b24560-9314-489c-a52d-6f08d59ed40e",
+      "dependencias": {
+        "postgresql_simulado": false,
+        "redis_simulado": true
+      },
+      "utc": "2026-10-13T02:25:21.687351+00:00"
+    },
+    {
+      "cenario": "04 PostgreSQL simulado recuperado",
+      "liveness": 200,
+      "readiness": 200,
+      "operacao": 200,
+      "api_ativa": true,
+      "geracao_api": 2,
+      "instancia": "76b24560-9314-489c-a52d-6f08d59ed40e",
+      "dependencias": {
+        "postgresql_simulado": true,
+        "redis_simulado": true
+      },
+      "utc": "2026-10-13T02:25:21.694685+00:00"
+    },
+    {
+      "cenario": "05 Redis simulado parado",
+      "liveness": 200,
+      "readiness": 503,
+      "operacao": 503,
+      "api_ativa": true,
+      "geracao_api": 2,
+      "instancia": "76b24560-9314-489c-a52d-6f08d59ed40e",
+      "dependencias": {
+        "postgresql_simulado": true,
+        "redis_simulado": false
+      },
+      "utc": "2026-10-13T02:25:21.724099+00:00"
+    },
+    {
+      "cenario": "06 Todas as dependências recuperadas",
+      "liveness": 200,
+      "readiness": 200,
+      "operacao": 200,
+      "api_ativa": true,
+      "geracao_api": 2,
+      "instancia": "76b24560-9314-489c-a52d-6f08d59ed40e",
+      "dependencias": {
+        "postgresql_simulado": true,
+        "redis_simulado": true
+      },
+      "utc": "2026-10-13T02:25:21.732494+00:00"
+    }
+  ],
+  "limite": "Não executa bancos reais, Kubernetes, kubelet ou Service."
+}
