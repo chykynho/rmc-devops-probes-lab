@@ -4,10 +4,13 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "rmc-probes-lab"
-version = "1.0.0"
-description = "Demonstração local de liveness e readiness com dependências simuladas"
+version = "1.1.0"
+description = "Laboratórios didáticos de DevOps: Liveness, Readiness e HPA"
 requires-python = ">=3.12,<3.13"
-dependencies = ["ipykernel>=6,<8"]
+dependencies = [
+    "ipykernel>=6,<8",
+    "matplotlib>=3.8,<4"
+]
 
 [tool.setuptools.packages.find]
 where = ["src"]

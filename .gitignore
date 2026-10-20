@@ -6,3 +6,11 @@ __pycache__/
 .env
 artifacts/
 Checkpoint_*.md
+
+# Materiais editoriais privados
+/carrossel/
+/LEGENDAS.md
+/RMC_DevOps_HPA_LinkedIn.pdf
+
+# Arquivos gerados
+/build/
